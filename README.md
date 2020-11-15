@@ -5,12 +5,12 @@ Singularity image for a deep learning (pytorch) environment + GPU support (cuda-
 To install singularity, see the [official docs](https://sylabs.io/guides/3.6/admin-guide/installation.html#installation-on-linux).
 
 ## Building the image
-To build an image called `torchenv.sif` based on the definition file `torchenv.def`, an NVIDIA GPU and `cuda-10.2` drivers must be available on the host system. Clone this repository, move into it and run the singularity build command. 
+To build an image called `torchenv.sif` based on the definition file `Singularity.1.0.0`, an NVIDIA GPU and `cuda-10.2` drivers must be available on the host system. Clone this repository, move into it and run the singularity build command. 
 
 ```
 git clone https://github.com/manuel-munoz-aguirre/singularity-pytorch-gpu.git && \
 cd singularity-pytorch-gpu && \
-sudo singularity build torchenv.sif torchenv.def
+sudo singularity build torchenv.sif Singularity.1.0.0
 ```
 
 ## Using the container
