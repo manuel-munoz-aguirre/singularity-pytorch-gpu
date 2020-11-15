@@ -1,16 +1,24 @@
+
 # singularity-pytorch-gpu
-Singularity image for a deep learning (pytorch) environment + GPU support (cuda-10.2). Contains libraries to perform common ML tasks. `JupyterLab` and `code-server` (VS Code) are also included in the image. This image has been tested in an HPC (SGE) with distributed pytorch applications.
+[![https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg](https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg)](https://singularity-hub.org/collections/4969)
+
+Singularity image for a deep learning (pytorch) environment + GPU support (cuda-10.2). Contains libraries to perform common ML tasks. `Openslide` is included to manipulate whole-slide histology images, `imagemagick` for general image manipulation. `JupyterLab` and `code-server` (VS Code) are also included in the image. This image has been tested in an HPC (SGE) with distributed pytorch applications.
 
 ## Installing singularity
 To install singularity, see the [official docs](https://sylabs.io/guides/3.6/admin-guide/installation.html#installation-on-linux).
 
-## Building the image
+## Building/downloading the image
 To build an image called `torchenv.sif` based on the definition file `Singularity.1.0.0`, an NVIDIA GPU and `cuda-10.2` drivers must be available on the host system. Clone this repository, move into it and run the singularity build command. 
 
 ```
 git clone https://github.com/manuel-munoz-aguirre/singularity-pytorch-gpu.git && \
 cd singularity-pytorch-gpu && \
 sudo singularity build torchenv.sif Singularity.1.0.0
+```
+
+Otherwise, the image can be pulled directly from singularity hub:
+```
+singularity pull torchenv.sif shub://manuel-munoz-aguirre/singularity-pytorch-gpu:1.0.0
 ```
 
 ## Using the container
