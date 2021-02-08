@@ -21,6 +21,10 @@ From: nvidia/cuda:10.2-cudnn7-devel-ubuntu18.04
 	openslide-tools && \
 	curl -sSOL https://github.com/cdr/code-server/releases/download/v3.6.2/code-server_3.6.2_amd64.deb && \
 	dpkg -i code-server_3.6.2_amd64.deb
+	
+	# Install nodejs
+	curl -sL https://deb.nodesource.com/setup_15.x | bash -
+	apt-get install -y nodejs
 
 	# Reduce image size
 	rm -rf /var/lib/apt/lists/*
